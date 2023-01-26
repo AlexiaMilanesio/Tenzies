@@ -51,7 +51,7 @@ export default function App() {
         localStorage.getItem("best-time");
       }
     }
-  }, [tenzies]);
+  }, [tenzies, bestTime, seconds]);
 
 
   function generateNewDie() {
