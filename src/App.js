@@ -13,7 +13,7 @@ export default function App() {
   // Time count
   const [seconds, setSeconds] = React.useState(0);
   // localStorage
-  const [bestTime, setBestTime] = React.useState(999);
+  const [bestTime, setBestTime] = React.useState(localStorage.getItem("best-time") || 999);
 
 
   React.useEffect(() => {
@@ -28,12 +28,12 @@ export default function App() {
 
 
   // Timer
-  React.useEffect(() => {
-    const currentTime = setInterval(() => {
-      setSeconds((prevSeconds) => prevSeconds + 1);
-    }, 1000);
-    
+  React.useEffect(() => { 
+    let currentTime;    
     if (!tenzies) {
+      currentTime = setInterval(() => {
+        setSeconds((prevSeconds) => prevSeconds + 1);
+      }, 1000);
       return () => clearInterval(currentTime);
     } else {
       return () => clearInterval(currentTime);
@@ -51,7 +51,7 @@ export default function App() {
         localStorage.getItem("best-time");
       }
     }
-  }, [tenzies, bestTime, seconds]);
+  }, [tenzies]);
 
 
   function generateNewDie() {

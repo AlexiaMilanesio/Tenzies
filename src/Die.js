@@ -12,12 +12,14 @@ export default function Die(props) {
           <div className="dot middle center"></div>
         </div>
       )}
+      
       {props.value === 2 && (
         <div className="dot-grid">
           <div className="dot top left"></div>
           <div className="dot bottom right"></div>
         </div>
       )}
+
       {props.value === 3 && (
         <div className="dot-grid">
           <div className="dot top left"></div>
@@ -25,6 +27,7 @@ export default function Die(props) {
           <div className="dot bottom right"></div>
         </div>
       )}
+
       {props.value === 4 && (
         <div className="dot-grid">
           <div className="dot left top"></div>
@@ -33,6 +36,7 @@ export default function Die(props) {
           <div className="dot right bottom"></div>
         </div>
       )}
+
       {props.value === 5 && (
         <div className="dot-grid">
           <div className="dot left top"></div>
@@ -42,6 +46,7 @@ export default function Die(props) {
           <div className="dot right bottom"></div>
         </div>
       )}
+      
       {props.value === 6 && (
         <div className="dot-grid">
           <div className="dot left top"></div>
